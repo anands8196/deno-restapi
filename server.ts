@@ -1,11 +1,6 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
-import * as flags from "https://deno.land/std/flags/mod.ts";
-const defaultPort: number = 8000;
-
-const { args, exit } = Deno;
 const app = new Application();
-const argPort = flags.parse(args).port;
-const port = argPort ? Number(argPort) : defaultPort;
+const port: number = 8000;
 
 import router from "./router.ts";
 
