@@ -1,1 +1,1 @@
-deno run --allow-net --allow-write --allow-read --allow-plugin --unstable server.ts
+deno run --allow-net=:${PORT} --cached-only --port=${PORT} --allow-write --allow-read --allow-plugin --unstable server.ts
