@@ -37,7 +37,6 @@ let activities: Activity[] = [
 
 // @route   GET /api/v1/activities
 const getActivities = async ({ response }: { response: any }) => {
-
   const activitiesDb = await activitiesCollection.find();
   // const activitiesDb=activitiesCollection;
   response.body = {
@@ -48,7 +47,7 @@ const getActivities = async ({ response }: { response: any }) => {
 
 // @desc    Get single Activity
 // @route   GET /api/v1/activities/:id
-/*
+
 const getActivity = async ({
   params,
   response
@@ -86,8 +85,8 @@ const addActivity = async ({
   request: any;
   response: any;
 }) => {
+  console.log("request",request);
   const body = await request.body();
-
   console.log(body);
 
   if (!request.hasBody) {
@@ -186,11 +185,10 @@ const deleteActivity = async ({
   }
 };
 
-*/
 export {
   getActivities,
-  // getActivity,
-  // addActivity,
-  // updateActivity,
-  // deleteActivity
+  getActivity,
+  addActivity,
+  updateActivity,
+  deleteActivity
 };
