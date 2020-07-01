@@ -98,6 +98,7 @@ const addActivity = async ({
   } else {
     const activity: Activity = body.value;
 
+    
     //Insert Activity in MongoDB
     const id = await activitiesCollection.insertOne(activity);
     activity.id = id;
